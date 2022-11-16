@@ -1,4 +1,5 @@
 .env
 bookstack/db/
 bookstack/app/
+dashmachine/config/
 
