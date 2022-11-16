@@ -1,0 +1,77 @@
+version: '3'
+
+services:
+  lychee_db:
+    container_name: lychee_db
+    image: mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    expose: 
+      - 3306
+    volumes:
+      - mysql:/var/lib/mysql
+    networks:
+      - lychee
+    restart: unless-stopped
+
+  lychee:
+    image: lycheeorg/lychee
+    container_name: lychee
+    ports:
+      - 8880:80
+    volumes:
+      - ./lychee/conf:/conf
+      - ./lychee/uploads:/uploads
+      - ./lychee/sym:/sym
+    networks:
+      - lychee
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - PHP_TZ=${PHP_TZ}
+      - TIMEZONE=${TIMEZONE}
+      #- APP_NAME=Laravel
+      #- APP_ENV=local
+      #- APP_DEBUG=true
+      #- APP_URL=http://localhost
+      #- LOG_CHANNEL=stack
+      - DB_CONNECTION=${DB_CONNECTION}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_DATABASE=${MYSQL_DATABASE}
+      - DB_USERNAME=${MYSQL_USER
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+      #- DB_DROP_CLEAR_TABLES_ON_ROLLBACK=false
+      #- DB_OLD_LYCHEE_PREFIX=''
+      #- BROADCAST_DRIVER=log
+      #- CACHE_DRIVER=file
+      #- SESSION_DRIVER=file
+      #- SESSION_LIFETIME=120
+      #- QUEUE_DRIVER=sync
+      #- SECURITY_HEADER_HSTS_ENABLE=false
+      #- REDIS_HOST=127.0.0.1
+      #- REDIS_PASSWORD=null
+      #- REDIS_PORT=6379
+      #- MAIL_DRIVER=smtp
+      #- MAIL_HOST=smtp.mailtrap.io
+      #- MAIL_PORT=2525
+      #- MAIL_USERNAME=null
+      #- MAIL_PASSWORD=null
+      #- MAIL_ENCRYPTION=null
+      #- PUSHER_APP_ID=''
+      #- PUSHER_APP_KEY=''
+      #- PUSHER_APP_SECRET=''
+      #- PUSHER_APP_CLUSTER=mt1
+      - STARTUP_DELAY=30
+    restart: unless-stopped
+    depends_on:
+      - lychee_db
+
+networks:
+  lychee:
+
+volumes:
+  mysql:
