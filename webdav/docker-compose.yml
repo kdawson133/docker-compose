@@ -1,0 +1,15 @@
+version: '3'
+services:
+  webdav:
+    image: apachewebdav/apachewebdav
+    restart: always
+    ports:
+      - "1080:80"
+    environment:
+      AUTH_TYPE: ${AUTH_TYPE}
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
+    volumes:
+      - ./appdata:/var/lib/dav
+      - ${HOST_DIR}:/var/lib/dav/data
+
