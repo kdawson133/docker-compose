@@ -4,3 +4,6 @@ bookstack/app/
 dashmachine/config/
 filebrowser/config/
 lychee/lychee/
+npm/data/
+npm/letsencrypt/
+
