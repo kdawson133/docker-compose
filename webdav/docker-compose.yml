@@ -2,6 +2,7 @@ version: '3'
 services:
   webdav:
     image: apachewebdav/apachewebdav
+    container_name: webdav
     restart: always
     ports:
       - "1080:80"
