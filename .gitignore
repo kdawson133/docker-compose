@@ -12,3 +12,5 @@ wikijs/config/
 wikijs/data/
 memos/memos/
 freshrss/data/
+prometheus/config/
+trilium_notes/trilium-data/
