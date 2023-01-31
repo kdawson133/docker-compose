@@ -1,0 +1,23 @@
+version: "3"
+services:
+
+    front:
+        image: tombursch/kitchenowl-web:latest
+        ports:
+        - "8082:80"
+        depends_on:
+        - back
+        networks:
+        - default
+    back:
+        image: tombursch/kitchenowl:latest
+        restart: unless-stopped
+        networks:
+        - default
+        environment:
+        - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+        volumes:
+        - ./data:/data
+
+networks:
+    default:
