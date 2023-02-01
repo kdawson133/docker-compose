@@ -11,8 +11,8 @@ Port    Container
 6875    bookstack
 8080    pihole
 8081    filebrowser
-8082    kitchenowl
-8083    
+8082    
+8083    recipesage    
 8880    lychee
 8888    freshrss
 9000    portainer
