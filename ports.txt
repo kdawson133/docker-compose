@@ -12,6 +12,8 @@ Port    Container
 8080    pihole
 8081    filebrowser    
 8083    recipesage   
+8050    miniflux
 8084    freshrss
+8765    wallabag
 8880    lychee
 9000    portainer
