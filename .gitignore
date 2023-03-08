@@ -12,4 +12,5 @@ wikijs/config/
 wikijs/data/
 kitchenowl/data/
 RecipeSage-selfhost
-fresh-rss/config
+miniflux/config
+wallabag/data
