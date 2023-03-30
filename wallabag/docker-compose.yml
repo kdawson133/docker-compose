@@ -2,6 +2,8 @@ version: "3"
 services:
   wallabag:
     image: wallabag/wallabag
+    container_name: wallabag
+    restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - SYMFONY__ENV__DATABASE_DRIVER=${SYMFONY__ENV__DATABASE_DRIVER}
@@ -38,6 +40,8 @@ services:
       - redis
   db:
     image: mariadb
+    container_name: wallabag-db
+    restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=wallaroot
     volumes:
@@ -48,6 +52,8 @@ services:
       timeout: 3s
   redis:
     image: redis:alpine
+    container_name: wallabag-redis
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 20s
