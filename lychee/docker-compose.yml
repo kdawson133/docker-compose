@@ -36,7 +36,8 @@ services:
       #- APP_NAME=Laravel
       #- APP_ENV=local
       #- APP_DEBUG=true
-      #- APP_URL=http://localhost
+      - APP_URL=https://gallery.deneb.group
+      - TRUSTED_PROXIES=*
       #- LOG_CHANNEL=stack
       - DB_CONNECTION=${DB_CONNECTION}
       - DB_HOST=${DB_HOST}
