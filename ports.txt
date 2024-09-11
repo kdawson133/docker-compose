@@ -12,4 +12,5 @@ Port    Container
 8083    recipesage   
 8050    miniflux
 8880    lychee
+8888    pingvin-share
 9000    portainer
