@@ -1,4 +1,4 @@
-Docker Server Used Port Listing
+ocker Server Used Port Listing
 -------------------------------
 Port    Container
 80      nginx-proxy-manager
@@ -9,8 +9,9 @@ Port    Container
 5000    dashmachine
 8080    pihole
 8081    filebrowser    
-8083    recipesage   
+8083    recipesage
+8088    searxng
 8050    miniflux
 8880    lychee
-8888    pingvin-share
+8888    searxng
 9000    portainer
