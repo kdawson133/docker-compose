@@ -16,6 +16,7 @@ services:
       - CREATE_ADMIN=1
       - ADMIN_USERNAME=${ADMIN_USERNAME}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - BASE_URL=https://rss.kirk.blue/
   db:
     image: postgres:15
     container_name: miniflux-db
