@@ -9,7 +9,7 @@ Port    Container
 5000    dashmachine
 8080    pihole
 8081    filebrowser    
-8083    recipesage
+8082    dokuwiki
 8088    searxng
 8050    miniflux
 8880    lychee
