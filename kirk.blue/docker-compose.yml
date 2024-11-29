@@ -5,6 +5,7 @@ services:
     container_name: kirk.blue
     image: httpd:latest
     ports:
-      - "808999999999 volumes:
+      - "8089:80" 
+    volumes:
       - ./htdocs:/usr/local/apache2/htdocs
 
