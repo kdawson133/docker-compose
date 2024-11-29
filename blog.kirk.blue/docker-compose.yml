@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  apache:
+    container_name: blog.kirk.blue
+    image: httpd:latest
+    ports:
+      - "8088:80"
+    volumes:
+      - ./htdocs:/usr/local/apache2/htdocs
+
