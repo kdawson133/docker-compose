@@ -4,6 +4,7 @@ services:
   apache:
     container_name: uap.kirk.blue
     image: httpd:latest
+    restart: unless-stopped
     ports:
       - "8090:80"
     volumes:
