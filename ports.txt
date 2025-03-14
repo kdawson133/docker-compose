@@ -5,7 +5,8 @@ Port    Container
 81      nginx-proxy-manager
 443     nginx-proxy-manager
 1080    webdav
-3000    wikijs
+3000    hoarder
+3300    wikijs
 5000    dashmachine
 8080    pihole
 8081    filebrowser    
