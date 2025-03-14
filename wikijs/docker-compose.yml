@@ -12,5 +12,5 @@ services:
       - ./config:/config
       - ./data:/data
     ports:
-      - 3000:3000
+      - 3300:3000
     restart: unless-stopped
