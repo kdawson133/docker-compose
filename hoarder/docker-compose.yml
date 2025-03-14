@@ -2,6 +2,7 @@ version: "3.8"
 services:
   web:
     image: ghcr.io/hoarder-app/hoarder:${HOARDER_VERSION:-release}
+    container_name: hoarder-web
     restart: unless-stopped
     volumes:
       # By default, the data is stored in a docker volume called "data".
@@ -22,6 +23,7 @@ services:
       DATA_DIR: /data # DON'T CHANGE THIS
   chrome:
     image: gcr.io/zenika-hub/alpine-chrome:123
+    container_name: hoarder-chrome
     restart: unless-stopped
     command:
       - --no-sandbox
@@ -32,6 +34,7 @@ services:
       - --hide-scrollbars
   meilisearch:
     image: getmeili/meilisearch:v1.11.1
+    container_name: hoarder-search
     restart: unless-stopped
     env_file:
       - .env
