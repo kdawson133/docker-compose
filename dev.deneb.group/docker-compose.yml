@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  apache:
+    container_name: dev.deneb.group
+    image: httpd:latest
+    restart: unless-stopped
+    ports:
+      - "8088:80" 
+    volumes:
+      - ./htdocs:/usr/local/apache2/htdocs
+
