@@ -6,6 +6,7 @@ Port    Container
 443     nginx-proxy-manager
 1080    webdav
 3000    hoarder
+3001    invideous
 3300    wikijs
 5000    dashmachine
 8080    pihole
