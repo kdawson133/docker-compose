@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  apache:
+    container_name: kirk.blue
+    image: httpd:latest
+    restart: unless-stopped
+    ports:
+      - "8091:80" 
+    volumes:
+      - ./htdocs:/usr/local/apache2/htdocs
+
