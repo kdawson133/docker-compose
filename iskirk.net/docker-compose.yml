@@ -2,7 +2,7 @@ version: '3'
 
 services:
   apache:
-    container_name: kirk.blue
+    container_name: iskirk.net
     image: httpd:latest
     restart: unless-stopped
     ports:
