@@ -6,7 +6,6 @@ Port    Container
 443     nginx-proxy-manager
 1080    webdav
 3000    hoarder
-3001    invideous
 3300    wikijs
 5000    dashmachine
 8080    pihole
@@ -14,6 +13,7 @@ Port    Container
 8088    apache
 8089    apache
 8090    apache
+8091    apache
 8050    miniflux
 8880    lychee
 8888    searxng
