@@ -10,6 +10,7 @@ Port    Container
 5000    dashmachine
 8080    pihole
 8081    filebrowser    
+8086    wavelog
 8088    apache
 8089    apache
 8090    apache
