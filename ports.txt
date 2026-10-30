@@ -7,7 +7,6 @@ Port    Container
 1080    webdav
 3000    hoarder
 3300    wikijs
-4000    forgejo
 5000    dashmachine
 8080    pihole
 8081    filebrowser    
