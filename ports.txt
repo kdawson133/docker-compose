@@ -5,6 +5,7 @@ Port    Container
 81      nginx-proxy-manager
 443     nginx-proxy-manager
 1080    webdav
+2283    immich
 3000    hoarder
 3300    wikijs
 5000    dashmachine
@@ -16,6 +17,5 @@ Port    Container
 8090    apache
 8091    apache
 8050    miniflux
-8880    lychee
 8888    searxng
 9000    portainer
