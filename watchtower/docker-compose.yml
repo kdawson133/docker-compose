@@ -1,8 +1,18 @@
-version: "3"
+---
 services:
   watchtower:
     container_name: watchtower
     restart: unless-stopped
-    image: containrrr/watchtower
+    image: nickfedor/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=21600 # Every Six Hours
+      - WATCHTOWER_LABEL_ENABLE=false
+
+# WATCHTOWER_CLEANUP. Set to 'true' will automatically remove old images.
+# WATCHTOWER_POLL_INTERVAL. Sets the frequency in seconds.
+# WATCHTOWER_LABEL_ENABLE. Restrict updates to containers with the 'com.centurylinklabs.
+
